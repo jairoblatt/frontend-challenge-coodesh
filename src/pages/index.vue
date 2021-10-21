@@ -1,5 +1,5 @@
 <template>
-  <section v-clickOutside="fetchUsersPagination" class="users">
+  <section class="users">
     <div class="users__header">
       <div class="users__search">
         <SearchBar v-model="filters.name" />
