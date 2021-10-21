@@ -6,6 +6,13 @@ import User from "../user.vue";
 import { MockUser } from "@/utils/tests";
 import VueMeta from "vue-meta";
 
+import Btn from "@/components/UI/Btn/index.vue";
+import Icon from "@/components/UI/Icon/index.vue";
+import Avatar from "@/components/UI/Avatar/index.vue";
+import Spinner from "@/components/UI/Spinner/index.vue";
+import ContentInfo from "@/components/User/ContentInfo/index.vue";
+import UrlClipBoard from "@/components/User/UrlClipBoard/index.vue";
+
 const localVue = createLocalVue();
 localVue.use(Vuex);
 localVue.use(VueMeta);
