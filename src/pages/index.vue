@@ -1,5 +1,5 @@
 <template>
-  <section v-clickOutside="fetchUsersPagination" class="users">
+  <section class="users">
     <div class="users__header">
       <div class="users__search">
         <SearchBar v-model="filters.name" />
@@ -42,7 +42,7 @@ import SearchFilter from "@/components/SearchFilter/index.vue";
 import Pagination from "@/components/UI/Pagination/index.vue";
 import Table from "@/components/Table/index.vue";
 import { mapGetters } from "vuex";
-import { UserData, UserApiInfo, Filters } from "@/types/types";
+import { UserData, UserApiInfo, Filters } from "@/types/IUser";
 import { genders, nationalities } from "@/utils";
 
 export default Vue.extend({
@@ -171,6 +171,16 @@ export default Vue.extend({
   @apply flex md:flex-row flex-col;
 }
 
+.users__header > div {
+  flex: 1 auto;
+}
+
+@screen md {
+  .users__header > div {
+    flex: 1 50%;
+  }
+}
+
 .users__search {
   @apply flex-auto self-auto md:self-end md:mb-0 mb-3;
 }
@@ -180,7 +190,7 @@ export default Vue.extend({
 }
 
 .users__content {
-  @apply mt-5;
+  @apply mt-5 sm:w-full overflow-x-auto whitespace-nowrap;
 }
 
 .users__children {

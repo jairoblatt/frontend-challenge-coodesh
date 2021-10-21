@@ -13,7 +13,7 @@
 <script lang="ts">
 import Vue from "vue";
 import { IAlert } from "./types/IAlert";
-import { Nullable } from "./types/types";
+import { Nullable } from "./types/IUser";
 
 export default Vue.extend({
   name: "App",

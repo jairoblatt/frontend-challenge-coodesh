@@ -51,12 +51,10 @@ export default Vue.extend({
     },
 
     resolveName(): string {
-      const { options, value } = this;
       let optionsSelected: IOption | undefined;
-
-      if (Array.isArray(options) && value) {
-        optionsSelected = options.find((option: IOption) => {
-          return option.value === value;
+      if (Array.isArray(this.options)) {
+        optionsSelected = this.options.find((option: IOption) => {
+          return option.value === this.value;
         });
       }
 
@@ -81,13 +79,7 @@ export default Vue.extend({
 
 <style lang="postcss" scoped>
 .search__filter {
-  @apply relative ml-2 h-full w-full;
-}
-
-@screen md {
-  .search__filter {
-    width: 12rem;
-  }
+  @apply relative md:ml-2 h-full w-full;
 }
 
 .search__title {

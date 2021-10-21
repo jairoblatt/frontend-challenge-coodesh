@@ -1,6 +1,6 @@
 import { GetterTree, MutationTree, ActionTree } from "vuex";
 import HTTPClient from "@/plugins/axios";
-import { Nullable, Users, UserApiInfo } from "@/types/types";
+import { Nullable, Users, UserApiInfo } from "@/types/IUser";
 import { sleep } from "@/utils";
 
 export const state = () => ({
