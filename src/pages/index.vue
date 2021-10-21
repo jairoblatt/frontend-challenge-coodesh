@@ -180,7 +180,7 @@ export default Vue.extend({
 }
 
 .users__content {
-  @apply mt-5;
+  @apply mt-5 sm:w-full overflow-x-auto whitespace-nowrap;
 }
 
 .users__children {

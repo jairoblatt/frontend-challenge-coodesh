@@ -149,7 +149,7 @@ export default Vue.extend({
 </script>
 <style lang="postcss" scoped>
 .modal {
-  @apply bg-white shadow-xl fixed left-2/4 top-2/4 transform -translate-x-2/4 -translate-y-2/4 px-10 py-8 w-full sm:w-11/12 md:w-4/5 lg:w-3/5 xl:w-4/12;
+  @apply bg-white shadow-xl fixed left-2/4 top-2/4 transform -translate-x-2/4 -translate-y-2/4 px-10 py-8  sm:w-11/12 md:w-4/5 lg:w-3/5 xl:w-4/12;
 
   outline: rgba(48, 48, 48, 0.418) solid 999999px;
 }

@@ -57,7 +57,7 @@ export default Vue.extend({
 
 <style lang="postcss" scoped>
 .table__wrapper {
-  @apply rounded-sm border border-gray-100 overflow-hidden text-center bg-white border-collapse w-full;
+  @apply rounded-sm border border-gray-100 text-center bg-white border-collapse w-full;
 }
 
 .table__wrapper thead tr {
