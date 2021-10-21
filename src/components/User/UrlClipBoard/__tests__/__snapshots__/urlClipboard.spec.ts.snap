@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UrlClipBoard.vue  Should mount the component 1`] = `
+"<div class=\\"user__url\\"><input type=\\"text\\" readonly=\\"readonly\\"> <button class=\\"btn\\">
+    <div class=\\"spinner-container\\" style=\\"display: none;\\"><span class=\\"spinner\\" style=\\"min-height: 21px; min-width: 21px;\\"></span></div> <i class=\\"mdi mdi-content-copy\\" style=\\"font-size: 14px;\\"></i>
+  </button></div>"
+`;

@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Avatar.vue Should mount component 1`] = `"<div class=\\"avatar\\" style=\\"height: 2rem; width: 2rem; border-width: 1px;\\"></div>"`;

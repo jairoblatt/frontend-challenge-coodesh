@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchBar.vue  Should mount the component 1`] = `
+"<div class=\\"search-bar\\"><input type=\\"text\\" placeholder=\\"Search user:\\" class=\\"search-bar__input\\">
+  <div class=\\"search-bar__prepend\\"><i class=\\"mdi mdi-account\\" style=\\"font-size: 28px;\\"></i></div>
+</div>"
+`;

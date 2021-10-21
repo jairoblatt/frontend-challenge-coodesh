@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Btn.vue Should mount the componente 1`] = `
+"<button class=\\"btn\\">
+  <div class=\\"spinner-container\\" style=\\"display: none;\\"><span class=\\"spinner\\" style=\\"min-height: 21px; min-width: 21px;\\"></span></div>
+</button>"
+`;

@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TableItem.vue  Should mount the component 1`] = `
+"<tr class=\\"table-item\\">
+  <td class=\\"item__avatar\\">
+    <!---->
+    Unknow name
+  </td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>"
+`;

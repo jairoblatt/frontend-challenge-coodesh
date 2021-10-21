@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Alert.vue  Should mount the component 1`] = `
+"<div class=\\"alert alert--fail\\"><button class=\\"alert__head btn\\">
+    <div class=\\"spinner-container\\" style=\\"display: none;\\"><span class=\\"spinner\\" style=\\"min-height: 21px; min-width: 21px;\\"></span></div> <i class=\\"mdi mdi-close\\" style=\\"font-size: 20px;\\"></i>
+  </button>
+  <div class=\\"alert__content\\"><span>My title</span>
+    <p>My description</p>
+  </div>
+</div>"
+`;

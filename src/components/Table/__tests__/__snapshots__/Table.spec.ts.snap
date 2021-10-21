@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Table.vue  Should mount the component 1`] = `
+"<table class=\\"table__wrapper\\">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Gender</th>
+      <th>Birth</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <transition-group-stub tag=\\"tbody\\" name=\\"slide-down\\"></transition-group-stub>
+</table>"
+`;

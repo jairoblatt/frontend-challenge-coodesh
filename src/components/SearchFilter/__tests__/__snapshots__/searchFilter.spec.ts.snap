@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchFilter.vue  Should mount the component 1`] = `
+"<div class=\\"search__filter\\"><span class=\\"search__title\\"></span>
+  <div class=\\"filter__input\\"><span>  </span> <button class=\\"btn\\">
+      <div class=\\"spinner-container\\" style=\\"display: none;\\"><span class=\\"spinner\\" style=\\"min-height: 21px; min-width: 21px;\\"></span></div> <i class=\\"mdi mdi-chevron-down\\" style=\\"font-size: 14px;\\"></i>
+    </button></div>
+  <transition-stub name=\\"fade-top-2x\\">
+    <ul class=\\"filter__options\\" style=\\"display: none;\\"></ul>
+  </transition-stub>
+</div>"
+`;

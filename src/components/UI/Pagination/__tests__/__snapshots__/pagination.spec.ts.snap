@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pagination unit tests Should mount the component 1`] = `
+"<div class=\\"pagination\\">
+  <transition-stub name=\\"slide-up\\">
+    <div class=\\"spinner-container\\" style=\\"display: none;\\"><span class=\\"spinner\\" style=\\"min-height: 40px; min-width: 40px;\\"></span></div>
+  </transition-stub>
+</div>"
+`;

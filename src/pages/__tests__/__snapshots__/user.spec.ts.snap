@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`User.vue  Should mount the component 1`] = `
+"<div class=\\"modal\\">
+  <div class=\\"modal__user\\">
+    <picture class=\\"avatar user__avatar\\" style=\\"height: 12rem; width: 12rem; border-width: 4px;\\">
+      <source srcset=\\"https://randomuser.me/api/portraits/thumb/women/6.jpg\\" media=\\"(max-width: 639px)\\">
+      <source srcset=\\"https://randomuser.me/api/portraits/med/women/6.jpg\\" media=\\"(min-width: 640px) and (max-width: 1023px)\\"> <img src=\\"https://randomuser.me/api/portraits/women/6.jpg\\" alt=\\"Liva avatar\\"></picture>
+    <div class=\\"modal__header\\"><button class=\\"btn\\">
+        <div class=\\"spinner-container\\" style=\\"display: none;\\"><span class=\\"spinner\\" style=\\"min-height: 21px; min-width: 21px;\\"></span></div> <i class=\\"mdi  mdi-close\\" style=\\"font-size: 21px;\\"></i>
+      </button></div>
+    <div class=\\"user__content\\">
+      <div class=\\"content__name\\">
+        <h1>Liva Christiansen</h1>
+      </div>
+      <div class=\\"content__andress\\">
+        <h2><i class=\\"mdi  mdi-map-marker-outline \\" style=\\"font-size: 14px;\\"></i>
+          Stoevring, Syddanmark (Denmark)
+        </h2>
+        <h3><i class=\\"mdi mdi-home-variant-outline\\" style=\\"font-size: 14px;\\"></i>
+          Hirsevænget, 5831
+        </h3>
+      </div>
+      <hr>
+      <div class=\\"content__infos\\">
+        <div class=\\"content__info\\"><span><i class=\\"mdi mdi-email-outline\\" style=\\"font-size: 21px;\\"></i></span> <small>
+            liva.christiansen@example.com
+          </small></div>
+        <div class=\\"content__info\\"><span><i class=\\"mdi mdi-gender-male-female\\" style=\\"font-size: 21px;\\"></i></span> <small>
+            female
+          </small></div>
+        <div class=\\"content__info\\"><span><i class=\\"mdi mdi-candle\\" style=\\"font-size: 21px;\\"></i></span> <small>
+            51
+          </small></div>
+        <div class=\\"content__info\\"><span><i class=\\"mdi mdi-cellphone\\" style=\\"font-size: 21px;\\"></i></span> <small>
+            41815273
+          </small></div>
+        <div class=\\"content__info\\"><span><i class=\\"mdi mdi-phone\\" style=\\"font-size: 21px;\\"></i></span> <small>
+            66653454
+          </small></div>
+        <div class=\\"content__info\\" data-testid=\\"idContentInfo\\"><span><i class=\\"mdi mdi-card-account-details\\" style=\\"font-size: 21px;\\"></i></span> <small>
+            CPR: 270570-1815
+          </small></div>
+      </div>
+      <hr>
+      <div class=\\"content__url\\"><span>Copy user url to clipboard:</span>
+        <div class=\\"user__url\\"><input type=\\"text\\" readonly=\\"readonly\\"> <button class=\\"btn\\">
+            <div class=\\"spinner-container\\" style=\\"display: none;\\"><span class=\\"spinner\\" style=\\"min-height: 21px; min-width: 21px;\\"></span></div> <i class=\\"mdi mdi-content-copy\\" style=\\"font-size: 14px;\\"></i>
+          </button></div>
+      </div>
+    </div>
+  </div>
+</div>"
+`;

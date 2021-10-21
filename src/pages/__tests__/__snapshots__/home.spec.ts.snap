@@ -1,0 +1,136 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home.vue  Should mount the component 1`] = `
+"<section class=\\"users\\">
+  <div class=\\"users__header\\">
+    <div class=\\"users__search\\">
+      <div class=\\"search-bar\\" value=\\"\\"><input type=\\"text\\" placeholder=\\"Search user:\\" class=\\"search-bar__input\\">
+        <div class=\\"search-bar__prepend\\"><i class=\\"mdi mdi-account\\" style=\\"font-size: 28px;\\"></i></div>
+      </div>
+    </div>
+    <div class=\\"users__filters\\">
+      <div class=\\"search__filter\\"><span class=\\"search__title\\">
+        Gender
+      </span>
+        <div class=\\"filter__input\\"><span>  </span> <button class=\\"btn\\">
+            <div class=\\"spinner-container\\" style=\\"display: none;\\"><span class=\\"spinner\\" style=\\"min-height: 21px; min-width: 21px;\\"></span></div> <i class=\\"mdi mdi-chevron-down\\" style=\\"font-size: 14px;\\"></i>
+          </button></div>
+        <transition-stub name=\\"fade-top-2x\\">
+          <ul class=\\"filter__options\\" style=\\"display: none;\\">
+            <li class=\\"option--active\\">
+              All
+            </li>
+            <li class=\\"\\">
+              Female
+            </li>
+            <li class=\\"\\">
+              Male
+            </li>
+          </ul>
+        </transition-stub>
+      </div>
+      <div class=\\"search__filter\\" data-testid=\\"filter-nationality\\"><span class=\\"search__title\\">
+        Nationalities
+      </span>
+        <div class=\\"filter__input\\"><span>  </span> <button class=\\"btn\\">
+            <div class=\\"spinner-container\\" style=\\"display: none;\\"><span class=\\"spinner\\" style=\\"min-height: 21px; min-width: 21px;\\"></span></div> <i class=\\"mdi mdi-chevron-down\\" style=\\"font-size: 14px;\\"></i>
+          </button></div>
+        <transition-stub name=\\"fade-top-2x\\">
+          <ul class=\\"filter__options\\" style=\\"display: none;\\">
+            <li class=\\"option--active\\">
+              All
+            </li>
+            <li class=\\"\\">
+              Australian
+            </li>
+            <li class=\\"\\">
+              Brazilian
+            </li>
+            <li class=\\"\\">
+              Canadian
+            </li>
+            <li class=\\"\\">
+              Switzerland
+            </li>
+            <li class=\\"\\">
+              German
+            </li>
+            <li class=\\"\\">
+              Danish
+            </li>
+            <li class=\\"\\">
+              Spanish
+            </li>
+            <li class=\\"\\">
+              Finnish
+            </li>
+            <li class=\\"\\">
+              French
+            </li>
+            <li class=\\"\\">
+              United Kingdom
+            </li>
+            <li class=\\"\\">
+              Irish
+            </li>
+            <li class=\\"\\">
+              Iraqi
+            </li>
+            <li class=\\"\\">
+              Norwegian
+            </li>
+            <li class=\\"\\">
+              Dutch
+            </li>
+            <li class=\\"\\">
+              New Zealand
+            </li>
+            <li class=\\"\\">
+              Turkey
+            </li>
+            <li class=\\"\\">
+              American
+            </li>
+          </ul>
+        </transition-stub>
+      </div>
+    </div>
+  </div>
+  <div class=\\"users__content\\">
+    <table class=\\"table__wrapper\\">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Gender</th>
+          <th>Birth</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <transition-group-stub tag=\\"tbody\\" name=\\"slide-down\\">
+        <tr class=\\"table-item\\">
+          <td class=\\"item__avatar\\">
+            <div class=\\"avatar mr-2\\" style=\\"height: 2.1rem; width: 2.1rem; border-width: 1.5px;\\"><img src=\\"https://randomuser.me/api/portraits/thumb/women/6.jpg\\" alt=\\"Liva Christiansen avatar\\"></div>
+            Liva Christiansen
+          </td>
+          <td>female</td>
+          <td>51</td>
+          <td><button class=\\"btn btn--small btn--outlined\\">
+              <div class=\\"spinner-container\\" style=\\"display: none;\\"><span class=\\"spinner\\" style=\\"min-height: 21px; min-width: 21px;\\"></span></div>
+              View
+            </button></td>
+        </tr>
+      </transition-group-stub>
+    </table>
+  </div>
+  <div class=\\"pagination pagination--active\\">
+    <transition-stub name=\\"slide-up\\">
+      <div class=\\"spinner-container\\"><span class=\\"spinner\\" style=\\"min-height: 40px; min-width: 40px;\\"></span></div>
+    </transition-stub>
+  </div>
+  <div class=\\"users__children\\">
+    <transition-stub name=\\"zoom-fade\\">
+      <routerview-stub></routerview-stub>
+    </transition-stub>
+  </div>
+</section>"
+`;
