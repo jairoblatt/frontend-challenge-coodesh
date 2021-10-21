@@ -29,7 +29,7 @@
 <script lang="ts">
 import Vue, { PropOptions } from "vue";
 import TableItem from "./TableItem.vue";
-import { UserData } from "@/types/types";
+import { UserData } from "@/types/IUser";
 
 export default Vue.extend({
   components: {

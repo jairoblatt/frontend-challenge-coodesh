@@ -42,7 +42,7 @@ import SearchFilter from "@/components/SearchFilter/index.vue";
 import Pagination from "@/components/UI/Pagination/index.vue";
 import Table from "@/components/Table/index.vue";
 import { mapGetters } from "vuex";
-import { UserData, UserApiInfo, Filters } from "@/types/types";
+import { UserData, UserApiInfo, Filters } from "@/types/IUser";
 import { genders, nationalities } from "@/utils";
 
 export default Vue.extend({
