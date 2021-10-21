@@ -79,13 +79,7 @@ export default Vue.extend({
 
 <style lang="postcss" scoped>
 .search__filter {
-  @apply relative ml-2 h-full w-full;
-}
-
-@screen md {
-  .search__filter {
-    width: 12rem;
-  }
+  @apply relative md:ml-2 h-full w-full;
 }
 
 .search__title {

@@ -171,6 +171,16 @@ export default Vue.extend({
   @apply flex md:flex-row flex-col;
 }
 
+.users__header > div {
+  flex: 1 auto;
+}
+
+@screen md {
+  .users__header > div {
+    flex: 1 50%;
+  }
+}
+
 .users__search {
   @apply flex-auto self-auto md:self-end md:mb-0 mb-3;
 }
