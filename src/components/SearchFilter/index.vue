@@ -51,12 +51,10 @@ export default Vue.extend({
     },
 
     resolveName(): string {
-      const { options, value } = this;
       let optionsSelected: IOption | undefined;
-
-      if (Array.isArray(options) && value) {
-        optionsSelected = options.find((option: IOption) => {
-          return option.value === value;
+      if (Array.isArray(this.options)) {
+        optionsSelected = this.options.find((option: IOption) => {
+          return option.value === this.value;
         });
       }
 
