@@ -42,7 +42,7 @@ import SearchFilter from "@/components/SearchFilter/index.vue";
 import Pagination from "@/components/UI/Pagination/index.vue";
 import Table from "@/components/Table/index.vue";
 import { mapGetters } from "vuex";
-import { UserData, UserApiInfo, Filters } from "@/types/IUser";
+import { UserData, UserApiInfo, Filters, FetchContext } from "@/types/IUser";
 import { genders, nationalities } from "@/utils";
 
 export default Vue.extend({
@@ -75,7 +75,12 @@ export default Vue.extend({
     }),
 
     usersFiltered(): UserData[] {
-      return this.filterByName();
+      return (
+        this.users?.filter((user: UserData) => {
+          const fullName = `${user.name.first} ${user.name.last}`.toLowerCase();
+          return fullName.includes(this.filters.name.toLowerCase());
+        }) || []
+      );
     },
   },
 
@@ -88,7 +93,7 @@ export default Vue.extend({
       seed: query?.seed,
       gender: query?.gender,
       nat: query?.nat,
-    });
+    } as FetchContext);
 
     if (typeof query?.gender === "string") {
       this.filters.gender = query.gender;
@@ -102,6 +107,7 @@ export default Vue.extend({
   watch: {
     usersFetchInfo(fetchInfo: UserApiInfo) {
       if (!fetchInfo) return;
+
       const { query } = this.$route;
       if (
         fetchInfo?.page !== Number(query?.page) ||
@@ -131,32 +137,25 @@ export default Vue.extend({
     },
 
     filterByGender(gender: string) {
-      this.filterFetch({ gender, nat: this.usersFetchInfo.nat });
+      this.filterFetch({ gender });
     },
 
     filterByNationality(nat: string) {
-      this.filterFetch({ nat, gender: this.usersFetchInfo.gender });
+      this.filterFetch({ nat });
     },
 
-    filterByName(): UserData[] {
-      return (
-        this.users?.filter((user: UserData) => {
-          const fullName = `${user.name.first} ${user.name.last}`.toLowerCase();
-          return fullName.includes(this.filters.name.toLowerCase());
-        }) || []
-      );
-    },
-
-    fetchUser(fetchContext = {}) {
+    fetchUser(fetchContext: FetchContext) {
       this.$store.dispatch("users/fetch", fetchContext);
     },
 
-    filterFetch(context = {}) {
+    filterFetch(fetchFilter: FetchContext) {
+      const nat = fetchFilter?.nat || this.usersFetchInfo.nat;
+      const gender = fetchFilter?.gender || this.usersFetchInfo.gender;
       // Reset users and fetch info state for make
       // an new fetch with the gender select.
       this.$store.commit("users/SET_USERS", null);
       this.$store.commit("users/FETCH_INFO", null);
-      this.fetchUser(context);
+      this.fetchUser({ nat, gender });
     },
   },
 });

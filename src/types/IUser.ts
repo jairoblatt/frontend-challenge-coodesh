@@ -70,7 +70,15 @@ export interface Users {
 }
 
 export interface Filters {
-  name: any;
+  name: string;
   gender: string;
   nat: string;
+}
+
+export interface FetchContext {
+  results?: number;
+  seed?: string;
+  page?: string | number;
+  nat?: string;
+  gender?: string;
 }
