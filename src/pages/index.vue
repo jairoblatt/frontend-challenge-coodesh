@@ -6,15 +6,20 @@
       </div>
 
       <div class="users__filters">
-        <SearchFilter :options="genders" v-model="filters.gender" @input="filterByGender">
+        <SearchFilter
+          :options="genders"
+          v-model="filters.gender"
+          data-testid="filter-gender"
+          @input="filterByGender"
+        >
           Gender
         </SearchFilter>
 
         <SearchFilter
           :options="nationalities"
           v-model="filters.nat"
-          @input="filterByNationality"
           data-testid="filter-nationality"
+          @input="filterByNationality"
         >
           Nationalities
         </SearchFilter>

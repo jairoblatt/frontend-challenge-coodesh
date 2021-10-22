@@ -1,7 +1,7 @@
 <template>
   <div :class="classes">
     <input :value="locationHref" type="text" readonly @focus="copyToClipBoard" />
-    <Btn @click="copyToClipBoard">
+    <Btn data-testid="clipboard" @click="copyToClipBoard">
       <Icon :icon="iconClipBoard" />
     </Btn>
   </div>

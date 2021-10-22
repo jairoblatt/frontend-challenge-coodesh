@@ -8,7 +8,7 @@
       </Avatar>
 
       <div class="modal__header">
-        <Btn @click="goToUsers">
+        <Btn data-testid="modal-close" @click="goToUsers">
           <Icon size="21"> mdi-close</Icon>
         </Btn>
       </div>
@@ -21,7 +21,8 @@
         <div class="content__andress">
           <h2>
             <Icon> mdi-map-marker-outline </Icon>
-            {{ user.location.city }}, {{ user.location.state }} ({{ user.location.country }})
+            {{ user.location.city }}, {{ user.location.state }}
+            <span>({{ user.location.country }})</span>
           </h2>
           <h3>
             <Icon>mdi-home-variant-outline</Icon>
