@@ -9,7 +9,7 @@ exports[`Home.vue  Should mount the component 1`] = `
       </div>
     </div>
     <div class=\\"users__filters\\">
-      <div class=\\"search__filter\\"><span class=\\"search__title\\">
+      <div class=\\"search__filter\\" data-testid=\\"filter-gender\\"><span class=\\"search__title\\">
         Gender
       </span>
         <div class=\\"filter__input\\"><span> All </span> <button class=\\"btn\\">
