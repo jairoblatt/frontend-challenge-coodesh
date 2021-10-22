@@ -35,11 +35,11 @@ export default Vue.extend({
 
 <style lang="postcss" scoped>
 .search-bar {
-  @apply w-full border border-gray-100 bg-white rounded-md pl-5 flex justify-between items-center overflow-hidden transition-colors;
+  @apply w-full border border-gray-100 bg-white rounded-md  flex justify-between items-center overflow-hidden transition-colors;
 }
 
 .search-bar__input {
-  @apply outline-none h-full pl-5 w-full text-light-onSurfacePrimary font-semibold;
+  @apply outline-none h-full md:pl-5 pl-2 w-full text-light-onSurfacePrimary font-semibold;
 }
 
 .search-bar__prepend {
