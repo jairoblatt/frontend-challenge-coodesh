@@ -47,7 +47,6 @@ context("Home", () => {
 
     cy.get(".modal  .content__andress h2 span").should("have.text", "(Brazil)");
   });
-
   context("User", () => {
     beforeEach(() => {
       cy.visit("/user/silverzebra371?page=2&seed=test");
