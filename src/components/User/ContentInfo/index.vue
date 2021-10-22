@@ -1,6 +1,6 @@
 <template>
   <div class="content__info">
-    <span> <Icon :icon="icon" size="21" /> </span>
+    <span> <Icon :icon="icon" size="19" /> </span>
     <small>
       <slot />
     </small>
@@ -19,11 +19,11 @@ export default Vue.extend({
 
 <style lang="postcss" scoped>
 .content__info {
-  @apply flex items-center justify-start md:justify-center border-solid border rounded-md border-gray-100 my-3 mx-2 md:w-auto w-full;
+  @apply flex items-center justify-start md:justify-center border-solid border rounded-md border-gray-100 my-1 md:my-3 mx-2 md:w-auto w-full;
 }
 
 .content__info span {
-  @apply font-bold  py-1 px-3 bg-primary-base text-white;
+  @apply font-bold py-1 px-3 bg-primary-base text-white;
 }
 
 .content__info small {

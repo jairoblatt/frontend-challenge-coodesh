@@ -23,22 +23,22 @@ exports[`User.vue  Should mount the component 1`] = `
       </div>
       <hr>
       <div class=\\"content__infos\\">
-        <div class=\\"content__info\\"><span><i class=\\"mdi mdi-email-outline\\" style=\\"font-size: 21px;\\"></i></span> <small>
+        <div class=\\"content__info\\"><span><i class=\\"mdi mdi-email-outline\\" style=\\"font-size: 19px;\\"></i></span> <small>
             liva.christiansen@example.com
           </small></div>
-        <div class=\\"content__info\\"><span><i class=\\"mdi mdi-gender-male-female\\" style=\\"font-size: 21px;\\"></i></span> <small>
+        <div class=\\"content__info\\"><span><i class=\\"mdi mdi-gender-male-female\\" style=\\"font-size: 19px;\\"></i></span> <small>
             female
           </small></div>
-        <div class=\\"content__info\\"><span><i class=\\"mdi mdi-candle\\" style=\\"font-size: 21px;\\"></i></span> <small>
+        <div class=\\"content__info\\"><span><i class=\\"mdi mdi-candle\\" style=\\"font-size: 19px;\\"></i></span> <small>
             51
           </small></div>
-        <div class=\\"content__info\\"><span><i class=\\"mdi mdi-cellphone\\" style=\\"font-size: 21px;\\"></i></span> <small>
+        <div class=\\"content__info\\"><span><i class=\\"mdi mdi-cellphone\\" style=\\"font-size: 19px;\\"></i></span> <small>
             41815273
           </small></div>
-        <div class=\\"content__info\\"><span><i class=\\"mdi mdi-phone\\" style=\\"font-size: 21px;\\"></i></span> <small>
+        <div class=\\"content__info\\"><span><i class=\\"mdi mdi-phone\\" style=\\"font-size: 19px;\\"></i></span> <small>
             66653454
           </small></div>
-        <div class=\\"content__info\\" data-testid=\\"idContentInfo\\"><span><i class=\\"mdi mdi-card-account-details\\" style=\\"font-size: 21px;\\"></i></span> <small>
+        <div class=\\"content__info\\" data-testid=\\"idContentInfo\\"><span><i class=\\"mdi mdi-card-account-details\\" style=\\"font-size: 19px;\\"></i></span> <small>
             CPR: 270570-1815
           </small></div>
       </div>

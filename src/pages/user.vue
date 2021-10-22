@@ -113,7 +113,7 @@ export default Vue.extend({
 
   mounted() {
     // It's added a tailwind class "overflow-hidden" in the body element
-    // to the avoid scroll when this component is shown.
+    // to  avoid scroll when this component is shown.
     document.body.classList.add("overflow-hidden");
     this.$once("hook:beforeDestroy", () => {
       document.body.classList.remove("overflow-hidden");
@@ -149,9 +149,15 @@ export default Vue.extend({
 </script>
 <style lang="postcss" scoped>
 .modal {
-  @apply bg-white shadow-xl fixed left-2/4 top-2/4 transform -translate-x-2/4 -translate-y-2/4 px-10 py-8  sm:w-11/12 md:w-4/5 lg:w-3/5 xl:w-4/12;
+  @apply bg-white shadow-xl fixed left-2/4 top-2/4 transform -translate-x-2/4 -translate-y-2/4 px-5 md:px-10 py-2 md:py-8;
 
   outline: rgba(48, 48, 48, 0.418) solid 999999px;
+}
+
+@screen md {
+  .modal {
+    max-width: 900px;
+  }
 }
 
 .modal__header {
@@ -167,7 +173,7 @@ export default Vue.extend({
 }
 
 .user__content {
-  @apply mt-24 text-light-onSurfacePrimary flex flex-col justify-center items-center;
+  @apply mt-12 md:mt-24 text-light-onSurfacePrimary flex flex-col justify-center items-center;
 }
 
 .user__content h1 {
@@ -192,11 +198,11 @@ h3 {
 }
 
 .content__url {
-  @apply flex flex-col justify-center items-center w-full mt-5 font-semibold;
+  @apply flex flex-col justify-center items-center w-full mt-1 md:mt-5 font-semibold;
 }
 
 .modal__user hr {
-  @apply bg-gray-200 my-5 w-3/5;
+  @apply bg-gray-200 my-2 md:my-5 w-3/5;
 }
 
 .user__avatar {
