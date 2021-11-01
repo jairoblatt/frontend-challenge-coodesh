@@ -12,6 +12,7 @@
     <transition-group tag="tbody" name="slide-down">
       <TableItem
         v-for="(user, index) in users"
+        v-intersect="tableItemIntersect"
         :key="`table-item-${index}`"
         :name="user.name"
         :gender="user.gender"
@@ -30,10 +31,15 @@
 import Vue, { PropOptions } from "vue";
 import TableItem from "./TableItem.vue";
 import { UserData } from "@/types/IUser";
+import { intersect } from "@/directives";
 
 export default Vue.extend({
   components: {
     TableItem,
+  },
+
+  directives: {
+    intersect,
   },
 
   props: {
@@ -50,6 +56,21 @@ export default Vue.extend({
         params: { username: user.login.username },
         query: this.$route.query,
       });
+    },
+
+    tableItemIntersect(entryIsVisible: boolean, entries: IntersectionObserverEntry[]) {
+      const intersectTarget = entries?.[0].target;
+
+      if (intersectTarget instanceof Element) {
+        const className = "table__intersect---active";
+        const targetContainClassName = intersectTarget.classList.contains(className);
+
+        if (entryIsVisible && targetContainClassName) {
+          intersectTarget.classList.remove(className);
+        } else if (!entryIsVisible && !targetContainClassName) {
+          intersectTarget.classList.add(className);
+        }
+      }
     },
   },
 });
@@ -78,5 +99,9 @@ export default Vue.extend({
 
 .table__wrapper tbody tr {
   @apply border border-gray-100 border-solid;
+}
+
+.table__intersect---active >>> td:not(:nth-child(3)) {
+  @apply hidden;
 }
 </style>
