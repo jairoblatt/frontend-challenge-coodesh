@@ -40,6 +40,19 @@ export default Vue.extend({
 body {
   background-color: #f9fbff;
   font-family: "Quicksand", sans-serif;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 4.5px;
+  height: 4.5px;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary-base;
+
+  border-radius: 20px;
 }
 
 .app {

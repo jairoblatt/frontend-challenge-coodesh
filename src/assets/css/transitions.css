@@ -160,23 +160,23 @@
     transform: translateY(-4%);
 }
 
-/* transition-group : list; */
+/* Transitions group */
+.list-enter {
+    transform: translate(0, -100%);
+    opacity: 0;
+}
+
+.list-enter-active {
+    transition: all .3s;
+}
+
+
 .list-leave-active {
-    position: absolute;
-}
-
-.list-enter,
-.list-leave-to {
+    transform: translate(0, 100%);
     opacity: 0;
-    transform: translateX(30px);
+    transition: all .3s;
 }
 
-/* transition-group : list-enter-up; */
-.list-enter-up-leave-active {
-    transition: none !important;
-}
-
-.list-enter-up-enter {
-    opacity: 0;
-    transform: translateY(30px);
+.list-move {
+    transition: transform .3s;
 }

@@ -9,7 +9,7 @@
       </tr>
     </thead>
 
-    <transition-group tag="tbody" name="slide-down">
+    <transition-group tag="tbody" name="list">
       <TableItem
         v-for="(user, index) in users"
         v-intersect="tableItemIntersect"
