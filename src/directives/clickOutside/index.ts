@@ -1,34 +1,46 @@
 import { VNodeDirective } from "vue";
 
-type OnClick = (event: Event) => void;
-type IElement = HTMLElement & { _clickOutside?: ClickOutside };
-interface ClickOutside {
-  callback?: (event: Event) => void;
-  onClick: OnClick;
+type onClickAndTouchFunction = (event: Event) => void;
+
+interface ClickOutsideVNodeDirective extends Omit<VNodeDirective, "modifiers"> {
+  value?: onClickAndTouchFunction | { callback: onClickAndTouchFunction; capture: boolean };
 }
 
-function handle(event: Event, el: IElement) {
+interface HTMLBaseElement extends HTMLElement {
+  _clickOutside?: {
+    callback?: <T>(event: Event) => T | void;
+    onClickAndTouch: onClickAndTouchFunction;
+    capture: boolean;
+  };
+}
+
+function clickOutsideHandle(event: Event, el: HTMLBaseElement) {
   if (!el.contains(event.target as HTMLElement) && el._clickOutside?.callback) {
     el._clickOutside.callback(event);
   }
 }
 
-function inserted(el: IElement, binding: VNodeDirective) {
-  if (typeof binding.value !== "function") return;
-  const onClick: OnClick = (event) => handle(event, el);
-
-  el._clickOutside = {
-    callback: binding.value,
-    onClick,
-  };
-
-  document.addEventListener("click", onClick, true);
+function inserted(el: HTMLBaseElement, binding: ClickOutsideVNodeDirective) {
+  const { callback, capture } =
+    typeof binding.value === "object" ? binding.value : { callback: binding.value, capture: true };
+  if (callback && capture !== undefined) {
+    const onClickAndTouch: onClickAndTouchFunction = (event) => clickOutsideHandle(event, el);
+    el._clickOutside = {
+      callback,
+      capture,
+      onClickAndTouch,
+    };
+    document.addEventListener("click", onClickAndTouch, capture);
+    document.addEventListener("touchstart", onClickAndTouch, capture);
+  }
 }
 
-function unbind(el: IElement) {
-  if (!el._clickOutside) return;
-  document.removeEventListener("click", el._clickOutside.onClick, true);
-  delete el._clickOutside;
+function unbind(el: HTMLBaseElement) {
+  if (el._clickOutside) {
+    document.removeEventListener("click", el._clickOutside.onClickAndTouch, el._clickOutside.capture);
+    document.removeEventListener("touchstart", el._clickOutside.onClickAndTouch, el._clickOutside.capture);
+    delete el._clickOutside;
+  }
 }
 
 export default {

@@ -6,12 +6,7 @@
       </div>
 
       <div class="users__filters">
-        <SearchFilter
-          :options="genders"
-          v-model="filters.gender"
-          data-testid="filter-gender"
-          @input="filterByGender"
-        >
+        <SearchFilter :options="genders" v-model="filters.gender" data-testid="filter-gender" @input="filterByGender">
           Gender
         </SearchFilter>
 
@@ -47,7 +42,7 @@ import SearchFilter from "@/components/SearchFilter/index.vue";
 import Pagination from "@/components/UI/Pagination/index.vue";
 import Table from "@/components/Table/index.vue";
 import { mapGetters } from "vuex";
-import { UserData, UserApiInfo, Filters, FetchContext } from "@/types/IUser";
+import { UserData, UserApiInfo, Filters, FetchContext } from "@/types/User";
 import { genders, nationalities } from "@/utils";
 
 export default Vue.extend({

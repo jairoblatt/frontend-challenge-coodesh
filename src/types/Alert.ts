@@ -1,4 +1,4 @@
-export interface IAlert {
+export interface Alert {
   id?: string | number;
   timeOut?: number | string | boolean;
   title: string;

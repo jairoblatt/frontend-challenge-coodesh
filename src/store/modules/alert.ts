@@ -1,8 +1,8 @@
 import { GetterTree, MutationTree, ActionTree } from "vuex";
-import { IAlert } from "@/types/IAlert";
+import { Alert } from "@/types/Alert";
 
 export const state = () => ({
-  alerts: [] as IAlert[],
+  alerts: [] as Alert[],
 });
 
 export type AlertState = ReturnType<typeof state>;
@@ -22,7 +22,7 @@ export const mutations: MutationTree<AlertState> = {
 };
 
 export const actions: ActionTree<AlertState, AlertState> = {
-  set({ commit }, payload: IAlert) {
+  set({ commit }, payload: Alert) {
     const { timeOut } = payload;
     commit("SET_ALERT", {
       ...payload,

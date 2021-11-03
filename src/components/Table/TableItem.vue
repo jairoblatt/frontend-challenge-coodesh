@@ -14,7 +14,7 @@
 
 <script lang="ts">
 import Vue, { PropOptions, PropType } from "vue";
-import { Nullable, UserName } from "@/types/IUser";
+import { Nullable, UserName } from "@/types/User";
 
 export default Vue.extend({
   props: {

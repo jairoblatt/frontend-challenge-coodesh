@@ -1,11 +1,11 @@
 import { mount, Wrapper, MountOptions, createLocalVue } from "@vue/test-utils";
 import Vuex from "vuex";
 import * as AlertModule from "@/store/modules/alert";
-import Alert from "../index.vue";
+import AlertComponent from "../index.vue";
 import Icon from "@/components/UI/Icon/index.vue";
 import Btn from "@/components/UI/Btn/index.vue";
 import Spinner from "@/components/UI/Spinner/index.vue";
-import { IAlert } from "@/types/IAlert";
+import { Alert } from "@/types/Alert";
 
 describe("Alert.vue ", () => {
   const localVue = createLocalVue();
@@ -14,12 +14,12 @@ describe("Alert.vue ", () => {
   localVue.component("Spinner", Spinner);
   localVue.use(Vuex);
 
-  const removeAlertSpy = jest.spyOn((Alert as any).options.methods, "removeAlert");
+  const removeAlertSpy = jest.spyOn((AlertComponent as any).options.methods, "removeAlert");
 
-  type Instance = InstanceType<typeof Alert>;
+  type Instance = InstanceType<typeof AlertComponent>;
   let mountFunction: (options?: MountOptions<Instance>) => Wrapper<Instance>;
 
-  const alertContent: IAlert = {
+  const alertContent: Alert = {
     id: "123",
     timeOut: 1000,
     title: "My title",
@@ -38,7 +38,7 @@ describe("Alert.vue ", () => {
         },
       });
 
-      return mount(Alert, {
+      return mount(AlertComponent, {
         propsData: {
           content: alertContent,
         },

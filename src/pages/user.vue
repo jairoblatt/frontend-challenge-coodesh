@@ -51,11 +51,7 @@
             {{ user.phone }}
           </ContentInfo>
 
-          <ContentInfo
-            v-if="user.id.value"
-            icon="mdi-card-account-details"
-            data-testid="idContentInfo"
-          >
+          <ContentInfo v-if="user.id.value" icon="mdi-card-account-details" data-testid="idContentInfo">
             {{ user.id.name }}: {{ user.id.value }}
           </ContentInfo>
         </div>
@@ -74,7 +70,7 @@ import Vue from "vue";
 import UrlClipBoard from "@/components/User/UrlClipBoard/index.vue";
 import ContentInfo from "@/components/User/ContentInfo/index.vue";
 import { clickOutside } from "@/directives";
-import { Nullable, UserData } from "@/types/IUser";
+import { Nullable, UserData } from "@/types/User";
 import { mapGetters } from "vuex";
 import { MetaInfo } from "vue-meta";
 

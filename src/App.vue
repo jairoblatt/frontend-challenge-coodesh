@@ -12,14 +12,14 @@
 
 <script lang="ts">
 import Vue from "vue";
-import { IAlert } from "./types/IAlert";
-import { Nullable } from "./types/IUser";
+import { Alert } from "./types/Alert";
+import { Nullable } from "./types/User";
 
 export default Vue.extend({
   name: "App",
 
   computed: {
-    alertContent(): Nullable<IAlert> | undefined {
+    alertContent(): Nullable<Alert | undefined> {
       return this.$store.getters["alert/get"];
     },
 

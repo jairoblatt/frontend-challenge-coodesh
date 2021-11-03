@@ -30,7 +30,7 @@
 <script lang="ts">
 import Vue, { PropOptions } from "vue";
 import TableItem from "./TableItem.vue";
-import { UserData } from "@/types/IUser";
+import { UserData } from "@/types/User";
 import { intersect } from "@/directives";
 
 export default Vue.extend({

@@ -12,7 +12,7 @@
 
 <script lang="ts">
 import Vue, { PropOptions } from "vue";
-import { IAlert } from "@/types/IAlert";
+import { Alert } from "@/types/Alert";
 import { sleep } from "@/utils";
 
 export default Vue.extend({
@@ -23,7 +23,7 @@ export default Vue.extend({
       type: Object,
       required: true,
       default: () => null,
-    } as PropOptions<IAlert>,
+    } as PropOptions<Alert>,
   },
 
   async mounted() {
